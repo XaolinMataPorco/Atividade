@@ -1,0 +1,11 @@
+class Cachorro {
+    public void latir () {
+        System.out.println("Au Au");
+    }
+    
+    public static void main(String[] args) {
+        Cachorro meuCachorro = new Cachorro();
+
+        meuCachorro.latir();
+    }
+}    
