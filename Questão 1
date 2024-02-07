@@ -1,11 +1,38 @@
-class Cachorro {
-    public void latir () {
-        System.out.println("Au Au");
-    }
-    
-    public static void main(String[] args) {
-        Cachorro meuCachorro = new Cachorro();
+import java.util.Scanner;
 
-        meuCachorro.latir();
+class Numero {
+    public boolean éImpar(int n) {
+        return n % 2 != 0;
     }
-}    
+
+    public boolean éPositivo(int n) {
+        return n > 0;
+    }
+}
+
+public class Principal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Numero numero = new Numero();
+
+        System.out.print("Insira um número inteiro: ");
+        int num1 = scanner.nextInt();
+
+        if (numero.éImpar(num1)) {
+            System.out.println(num1 + " é ímpar.");
+        } else {
+            System.out.println(num1 + " não é ímpar.");
+        }
+
+        System.out.print("Insira outro número inteiro: ");
+        int num2 = scanner.nextInt();
+
+        if (numero.éPositivo(num2)) {
+            System.out.println(num2 + " é positivo.");
+        } else {
+            System.out.println(num2 + " não é positivo.");
+        }
+
+        scanner.close();
+    }
+}
